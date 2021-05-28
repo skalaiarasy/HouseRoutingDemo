@@ -1,0 +1,6 @@
+<app-search-form (submitsearch)= "searchHousesByType($event)"></app-search-form>
+<div *ngFor="let house of getHouseResult()">
+    <h2>{{ house.type }} </h2>
+    <img src="{{ house.img }}">
+    <a [routerLink] = "['/house', house.id]">View Details</a>
+</div>
